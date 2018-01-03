@@ -1,7 +1,7 @@
 \ProvidesClass{resume}
 \LoadClass[11pt]{article}
 
-\RequirePackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\RequirePackage[left=2cm,right=1.75cm,top=1.25cm,bottom=1.25cm]{geometry}
 \RequirePackage{blindtext}
 \RequirePackage{tcolorbox}
 \RequirePackage{indentfirst}
@@ -9,6 +9,7 @@
 \RequirePackage{enumitem}
 \RequirePackage{tabularx}
 \RequirePackage{multirow}
+\RequirePackage{multicol}
 \RequirePackage{colortbl}
 \RequirePackage{pbox}
 
@@ -44,7 +45,7 @@
 %
 \newcommand{\experience}[6]{
     \begin{tabularx}{\textwidth}{ p{3.7cm} @{\hspace{1em}}X }
-        \multirow{3}{*}[0.7em]{\pbox{3.6cm}{\relax\ifvmode\centering\fi #1 \\ \small(#2)}} & {\textit{#3}} \\
+        \multirow{3}{*}[0.7em]{\pbox{3.6cm}{\relax\ifvmode\centering\fi #1 \\ \small(#2)}} & {#3} \\
         & \cellcolor{gray!10} #4 \hfill #5 \\
         & #6 \\
     \end{tabularx}
